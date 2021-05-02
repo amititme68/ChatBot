@@ -1,0 +1,87 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - Reserve
+  - Number_of_Seats
+  - AC
+  - Step_1_and_2
+  - Non-AC
+  - Reserve_Time
+  - Valid
+  - Timing
+  - Open
+  - Cancel
+  - Specials
+
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_Reserve:
+  - text: "How many seats would you like to reserve"
+
+  utter_Number_of_Seats:
+  - text: "Which section would you like to book:"
+    buttons:
+    - title: "AC"
+      payload: "/AC"
+    - title: "Non-AC"
+      payload: "/Non-AC"
+
+  utter_AC:
+  - text: "When would you like to book a reservation? (We are only open from 7pm to 10pm)"
+
+  utter_Non-AC:
+  - text: "When would you like to book a reservation? (We are only open from 7pm to 10pm)"
+
+  utter_Reserve_Time:
+  - text: "You have reserved 2 seats in our AC section for 7:30pm. Thanks!"
+
+  utter_Invalid_time:
+  - text: "We are not open at that time. We are only open from 7pm to 10pm"
+
+  utter_Valid:
+  - text: "You have reserved 4 seats in our Non-AC section for 7:30pm. Thanks!"
+
+  utter_Validate:
+  - text: "You have reserved 4 seats in our Non-AC section for 8pm. Thanks!"
+
+  utter_Timing:
+  - text: "The restaurant opens at 7pm and closes at 10pm."
+
+  utter_Open:
+  - text: "The restaurant is open each and every day."
+
+  utter_Cancel:
+  - text: "To cancel a reservation, simply call us at +91 9876543210 and cancel your reservation"
+
+  utter_Specials:
+  - text: " Our chef is a master of the Italian cuisine. Our core speciality is our pasta, which is renowned throughout the city."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,199 @@
+yversion: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: Reserve
+  examples: |
+    - I want to reserve a table
+    - I need to reserve a table
+    - Interest in reserving a table
+    - Book a table
+    - I am interested in booking a table
+    - need to book a table
+    - Book a table
+    - I’d like to make a booking
+    - I need to make a booking
+    - Can you reserve one of your tables
+    - I would like a booth, please.
+    - Do you have any tables?
+
+- intent: Number_of_Seats
+  examples: |
+    - 2 seats
+    - Two seats
+    - Two seat
+    - 2 seat
+    - Seats 2
+    - Seats Two
+
+- intent: AC
+  examples: |
+    - AC
+    - ac
+    - Airconditioner
+    - AC Room
+
+- intent: Step_1_and_2
+  examples: |
+    - I want to reserve a table for 4
+    - I want to reserve a table for a party of 4
+    - Want to reserve for 4
+    - for 4 persons
+    - For 4 people
+    - 4 persons
+    - Reserve for 4
+    - For 4 parties
+    - Book for 4 persons
+
+- intent: Non-AC
+  examples: |
+    - Non-AC
+    - Simple
+    - Non-Aircondition
+
+- intent: Reserve_Time
+  examples: |
+    - In half an hour
+    - In 30 minutes
+    - In 30 mins
+    - Half hour
+    - Half an hour
+    - 30 minutes
+    - Thirty minutes
+    - Thirty mins
+
+- intent: Valid
+  examples: |
+    - 7 pm
+    - 7:30 pm
+    - 8 pm
+    - 8:30 pm
+    - 9 pm
+    - 9:30 pm
+
+- intent: Timing
+  examples: |
+    - What are your timings?
+    - Wanted to know your timings?
+    - Need to know your timings?
+    - Your timings please.
+    - Timings
+
+- intent: Open
+  examples: |
+    - What days are you open?
+    - Are you open today?
+    - Are you open now?
+    - Your open days?
+    - When will you be open?
+    - What days are you open
+
+- intent: Cancel
+  examples: |
+    - How do I cancel a reservation?
+    - I want to cancel
+    - I need to cancel
+    - How can I do the cancellation?
+    - Plan Changed
+    - Please cancel
+    - Cancel my booking
+    - Booking cancel please
+    - Cancel it
+
+- intent: Specials
+  examples: |
+    - What are the specials?
+    - Your specials
+    - Want to know your specials
+    - What's new?
+    - Tour special food?
+    - What are you famous for?

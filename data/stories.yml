@@ -1,0 +1,78 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: Booking AC allowed
+  steps:
+  - intent: Reserve
+  - action: utter_Reserve
+  - intent: Number_of_Seats
+  - action: utter_Number_of_Seats
+  - intent: AC
+  - action: utter_AC
+  - intent: Reserve_Time
+  - action: utter_Reserve_Time
+
+- story: Booking Non AC
+  steps:
+  - intent: Step_1_and_2
+  - action: utter_Number_of_Seats
+  - intent: Non-AC
+  - action: utter_Non-AC
+  - intent: Reserve_Time
+  - action: utter_Invalid_time
+  - action: utter_Non-AC
+  - intent: Valid
+  - action: utter_Valid
+
+
+- story: FAQs
+  steps:
+  - intent: Timing
+  - action: utter_Timing
+  - intent: Open
+  - action: utter_Open
+  - intent: Cancel
+  - action: utter_Cancel
+  - intent: Specials
+  - action: utter_Specials
+
+
+- story: Bonus section
+  steps:
+  - intent: Step_1_and_2
+  - action: utter_Number_of_Seats
+  - intent: AC
+  - action: utter_AC
+  - intent: Open
+  - action: utter_Open
+  - action: utter_Non-AC
+  - intent: Valid
+  - action: utter_Validate
