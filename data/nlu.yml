@@ -1,6 +1,20 @@
 yversion: "2.0"
 
 nlu:
+
+- intent: time_stamp
+  examples: |
+    - What time are you available?
+    - time
+    - What
+    - Available
+    - 7 pm
+    - 7:30 pm
+    - 8 pm
+    - 8:30 pm
+    - 9 pm
+    - 9:30 pm
+
 - intent: greet
   examples: |
     - hey
@@ -106,15 +120,6 @@ nlu:
     - I would like a booth, please.
     - Do you have any tables?
 
-- intent: Number_of_Seats
-  examples: |
-    - 2 seats
-    - Two seats
-    - Two seat
-    - 2 seat
-    - Seats 2
-    - Seats Two
-
 - intent: AC
   examples: |
     - AC
@@ -197,3 +202,25 @@ nlu:
     - What's new?
     - Tour special food?
     - What are you famous for?
+
+- intent: seat_entry
+  examples: |
+    - [1](number_seats)
+    - [one](number_seats)
+    - [2](number_seats)
+    - [Two](number_seats)
+    - [3](number_seats)
+    - [Four](number_seats)
+    - [4](number_seats)
+    - [Three](number_seats)
+    - [2](number_seats) seats
+    - [Two](number_seats) seats
+    - [3](number_seats) seats
+    - [Three](number_seats) seats
+    - [3](number_seats) seats
+    - [4](number_seats) seats
+    - [Four](number_seats) seats
+    - [1](number_seats) seats
+    - [One](number_seats) seats
+
+

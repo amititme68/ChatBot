@@ -6,11 +6,11 @@
 
 
 # This is a simple example for a custom action which utters "Hello World!"
-
-# from typing import Any, Text, Dict, List
-#
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
+import time
+from typing import Any, Text, Dict, List
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.forms import FormAction
 #
 #
 # class ActionHelloWorld(Action):
@@ -25,25 +25,22 @@
 #         dispatcher.utter_message(text="Hello World!")
 #
 #         return []
+class ActionHelloWorld(Action):
 
-from datetime import datetime
-import pytz
-def CheckAvailablityTime():
-    UTC=pytz.utc
-    IST=pytz.timezone('Asia/Kolkata')
-    datetime_ist=datetime.now(IST)
-    check_new = 0
-    check = datetime_ist.strftime('%H')
-    if (check[0] == '0'):
-        check_new = check[1]
-    else:
-        check_new = int(check)
-    if ((check_new >= 7 and check_new < 10) or (check_new >= 19 and check_new < 22)):
-        return 1
-    else:
-        return 0
-    print(check_new)
+     def name(self) -> Text:
+         return "action_hello_world"
 
-n=CheckAvailablityTime()
-if(n==1):
-    return(time())
+     def run(self, dispatcher: CollectingDispatcher,
+             tracker: Tracker,
+             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+         times=list(map(int, time.strftime('%H:%M').split(':')))
+         if int(times[1])>30:
+             timestr = '%02d:00'% (times[0]+1)
+         else:
+             timestr = '%02d:30' % (times[0])
+         if(times[0]+(times[1]/60)>=19 and times[0]+(times[1]/60)<=22):
+             dispatcher.utter_message(text="You have reserved 2 seats in our AC section for %s pm. Thanks!" % timestr)
+         else:
+            dispatcher.utter_message(text="We are not open at that time. We are only open from 7pm to 10pm")
+
+         return []

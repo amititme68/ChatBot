@@ -33,12 +33,12 @@ stories:
   steps:
   - intent: Reserve
   - action: utter_Reserve
-  - intent: Number_of_Seats
+  - intent: seat_entry
   - action: utter_Number_of_Seats
   - intent: AC
   - action: utter_AC
   - intent: Reserve_Time
-  - action: utter_Reserve_Time
+  - action: utter_enter_seat
 
 - story: Booking Non AC
   steps:
@@ -49,9 +49,6 @@ stories:
   - intent: Reserve_Time
   - action: utter_Invalid_time
   - action: utter_Non-AC
-  - intent: Valid
-  - action: utter_Valid
-
 
 - story: FAQs
   steps:
@@ -75,4 +72,14 @@ stories:
   - action: utter_Open
   - action: utter_Non-AC
   - intent: Valid
-  - action: utter_Validate
+  - action: utter_Valid
+
+- story: time stamp
+  steps:
+  - intent: time_stamp
+  - action: action_hello_world
+
+- story: seat entry
+  steps:
+  - intent: seat_entry
+  - action: utter_enter_seat
